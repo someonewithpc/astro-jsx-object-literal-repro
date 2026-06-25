@@ -1,0 +1,18 @@
+---
+import Widget from '../components/Widget.astro';
+---
+
+<html lang="en">
+  <body>
+    <h1>JSX inside object literal in template expression</h1>
+
+    {(layer = 'main') => ({
+      main: (
+        <Widget />
+      ),
+      other: (
+        <p>Other layer</p>
+      ),
+    }[layer])}
+  </body>
+</html>
